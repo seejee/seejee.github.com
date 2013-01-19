@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://seejee.github.com/blog/sitemap.xml 
+Sitemap: http://seejee.github.com//sitemap.xml 
