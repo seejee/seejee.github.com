@@ -1,0 +1,89 @@
+body {
+  line-height: 1;
+  color: black;
+  font-weight: normal;
+  font-family: 'PT Sans',Arial;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+
+  line-height: 1;
+  color: black;
+  font-weight: normal;
+  font-family: 'PT Sans',Arial;
+}
+
+#container {
+  width: 650px;
+  margin: 0 auto 50px auto;
+  padding: 70px 0 0 0;
+}
+
+.header {
+  text-transform: uppercase;
+
+  padding: 20px 20px 10px 20px;
+  border-bottom: solid 1px #E5E5E5;
+  border-top: solid 1px #E5E5E5;
+}
+
+.greeting h1 {
+  font-size: 58px;
+}
+
+.greeting h3 {
+  color: #C6C6C6;
+  font-size: 36px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.2;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: solid 1px #E5E5E5;
+}
+
+.content p {
+  margin-top: 20px;
+  padding: 0px;
+}
+
+.social {
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: solid 1px #E5E5E5;
+}
+
+.social ul {
+  margin: 0px;
+  padding: 0px;
+
+  display: table;
+  width: 100%;
+  /*table-layout: fixed;*/
+}
+
+.social li {
+  display: table-cell;
+  list-style-type: none;
+}
+
+.social li a {
+  display: block;
+  text-align: center;
+  margin: 0 5px;
+}
+
