@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[seejee's blog]]></title>
+  <title><![CDATA[Simple is hard]]></title>
   <link href="http://seejee.github.com//atom.xml" rel="self"/>
   <link href="http://seejee.github.com//"/>
-  <updated>2013-01-19T09:52:41-05:00</updated>
+  <updated>2013-01-20T13:17:11-05:00</updated>
   <id>http://seejee.github.com//</id>
   <author>
     <name><![CDATA[Chris Geihsler]]></name>
