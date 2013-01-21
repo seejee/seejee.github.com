@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SRP, | Simple is not easy.]]></title>
   <link href="http://seejee.github.com//blog/categories/srp-/atom.xml" rel="self"/>
   <link href="http://seejee.github.com//"/>
-  <updated>2013-01-20T23:21:02-05:00</updated>
+  <updated>2013-01-20T23:23:49-05:00</updated>
   <id>http://seejee.github.com//</id>
   <author>
     <name><![CDATA[Chris Geihsler]]></name>
@@ -29,17 +29,13 @@
 
 <p>A quick explanation of each command:</p>
 
-<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log
-</code></pre>
-
 <ol>
-<li><p>Read the log file and skip all the lines before the controller action:</p>
-
-<p>sed '/Completed/,$d'</p></li>
-<li><p>Skip all the lines after the controller action</p>
-
-<p>sed 's/<sup>.*SELECT/SELECT/'</sup></p></li>
-<li><p>Remove all the text on each line that precedes 'SELECT'</p></li>
+<li><p>Read the log file and skip all the lines before the controller action:
+sed '1,/CurrentItemsController#show/d' log/test.log</p></li>
+<li><p>Skip all the lines after the controller action
+sed '/Completed/,$d'</p></li>
+<li><p>Remove all the text on each line that precedes 'SELECT'
+sed 's/<sup>.*SELECT/SELECT/'</sup></p></li>
 <li><p>Sort the rows so duplicate queries will be on adjacent lines
 sort</p></li>
 <li><p>Group the duplicate lines and count them
@@ -53,11 +49,12 @@ head -5</p></li>
 
 <p>And it generated this output:</p>
 
-<p>   7 SELECT COUNT(<em>) FROM "activity_attemptables" WHERE "activity_attemptables"."activity_id" = 1 AND "activity_attemptables"."completed" = 'f'
-   7 SELECT "activities".</em> FROM "activities" WHERE "activities"."lesson_id" = 1 AND "activities"."completed" = 'f' ORDER BY activities.position LIMIT 1
-   4 SELECT "lesson".<em> FROM "lesson" WHERE "lesson"."id" = 1 AND (lesson.passed IS NULL) ORDER BY lesson.position LIMIT 1
-   3 SELECT COUNT(</em>) FROM "activity_attemptables" WHERE "activity_attemptables"."activity_id" = 1 AND "activity_attemptables"."completed" = 'f'
-   3 SELECT "activities".* FROM "activities" WHERE "activities"."lesson_id" = 1 AND "activities"."completed" = 'f' ORDER BY activities.position LIMIT 1</p>
+<pre><code>7 SELECT COUNT(*) FROM "activity_attemptables" WHERE "activity_attemptables"."activity_id" = 1 AND "activity_attemptables"."completed" = 'f'
+7 SELECT "activities".* FROM "activities" WHERE "activities"."lesson_id" = 1 AND "activities"."completed" = 'f' ORDER BY activities.position LIMIT 1
+4 SELECT "lesson".* FROM "lesson" WHERE "lesson"."id" = 1 AND (lesson.passed IS NULL) ORDER BY lesson.position LIMIT 1
+3 SELECT COUNT(*) FROM "activity_attemptables" WHERE "activity_attemptables"."activity_id" = 1 AND "activity_attemptables"."completed" = 'f'
+3 SELECT "activities".* FROM "activities" WHERE "activities"."lesson_id" = 1 AND "activities"."completed" = 'f' ORDER BY activities.position LIMIT 1
+</code></pre>
 
 <p>Armed with the sorted list of the duplicated queries, we were able to find the sources of the duplication and optimize them.</p>
 
