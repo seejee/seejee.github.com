@@ -4,7 +4,7 @@
   <title><![CDATA[Category: SRP, | Simple is not easy.]]></title>
   <link href="http://seejee.github.com//blog/categories/srp-/atom.xml" rel="self"/>
   <link href="http://seejee.github.com//"/>
-  <updated>2013-01-20T23:26:00-05:00</updated>
+  <updated>2013-01-20T23:28:40-05:00</updated>
   <id>http://seejee.github.com//</id>
   <author>
     <name><![CDATA[Chris Geihsler]]></name>
@@ -32,60 +32,29 @@ sort | uniq -c | sort -r | head -5
 <p>A quick explanation of each command:</p>
 
 <ol>
-<li>Read the log file and skip all the lines before the controller action.</li>
+<li><p>Read the log file and skip all the lines before the controller action.</p>
+
+<p>   sed '1,/CurrentItemsController#show/d' log/test.log</p></li>
+<li><p>Skip all the lines after the controller action.</p>
+
+<p>   sed '/Completed/,$d'</p></li>
+<li><p>Remove all the text on each line that precedes 'SELECT'.</p>
+
+<p>   sed 's/<sup>.*SELECT/SELECT/'</sup></p></li>
+<li><p>Sort the rows so duplicate queries will be on adjacent lines.</p>
+
+<p>   sort</p></li>
+<li><p>Group the duplicate lines and count them.</p>
+
+<p>   uniq -c</p></li>
+<li><p>Sort the queries by how many times they were duped.</p>
+
+<p>   sort</p></li>
+<li><p>Return the top 5.</p>
+
+<p>   head -5</p></li>
 </ol>
 
-
-<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log
-</code></pre>
-
-<ol>
-<li>Skip all the lines after the controller action.</li>
-</ol>
-
-
-<pre><code>sed '/Completed/,$d' 
-</code></pre>
-
-<ol>
-<li>Remove all the text on each line that precedes 'SELECT'.</li>
-</ol>
-
-
-<pre><code>sed 's/^.*SELECT/SELECT/'
-</code></pre>
-
-<ol>
-<li>Sort the rows so duplicate queries will be on adjacent lines.</li>
-</ol>
-
-
-<pre><code>sort
-</code></pre>
-
-<ol>
-<li>Group the duplicate lines and count them.</li>
-</ol>
-
-
-<pre><code>uniq -c
-</code></pre>
-
-<ol>
-<li>Sort the queries by how many times they were duped.</li>
-</ol>
-
-
-<pre><code>sort
-</code></pre>
-
-<ol>
-<li>Return the top 5.</li>
-</ol>
-
-
-<pre><code>head -5
-</code></pre>
 
 <p>And it generated this output:</p>
 
