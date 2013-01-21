@@ -109,7 +109,7 @@ sort | uniq -c | sort -r | head -5
 <ol>
 <li><p>Read the log file and skip all the lines before the controller action.</p>
 
-<pre><code>`sed '1,/CurrentItemsController#show/d' log/test.log`
+<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log
 </code></pre></li>
 <li><p>Skip all the lines after the controller action.</p>
 
