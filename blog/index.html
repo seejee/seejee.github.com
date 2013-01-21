@@ -99,7 +99,9 @@
 
 <p>We created the following set of commands:</p>
 
-<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log | sed '/Completed/,$d' | sed 's/^.*SELECT/SELECT/' | sort | uniq -c | sort -r | head -5
+<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log | \
+sed '/Completed/,$d' | sed 's/^.*SELECT/SELECT/' | \
+sort | uniq -c | sort -r | head -5
 </code></pre>
 
 <p>A quick explanation of each command:</p>
