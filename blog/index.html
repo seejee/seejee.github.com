@@ -70,7 +70,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/blog/2013/01/20/srp-the-unix-way/">SRP: The Unix Way</a></h1>
+      <h1 class="entry-title"><a href="/blog/blog/2013/01/20/srp-the-unix-way/">SRP: The UNIX Way</a></h1>
     
     
       <p class="meta">
@@ -109,7 +109,7 @@ sort | uniq -c | sort -r | head -5
 <ol>
 <li><p>Read the log file and skip all the lines before the controller action.</p>
 
-<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log
+<pre><code>`sed '1,/CurrentItemsController#show/d' log/test.log`
 </code></pre></li>
 <li><p>Skip all the lines after the controller action.</p>
 
@@ -149,7 +149,7 @@ sort | uniq -c | sort -r | head -5
 
 <p>Armed with the sorted list of the duplicated queries, we were able to find the sources of the duplication and optimize them.</p>
 
-<p>While I hope you find the concrete example above to be useful, I used the example to make a larger point. Each of the utilities used above has a single responsibility. Because of this, stringing them together to work in ways the original authors never intended was relatively easy.</p>
+<p>While I hope you found the concrete example above to be useful, I used the example to make a larger point. Each of the utilities used above has a single responsibility. Because of this, stringing them together to work in ways the original authors never intended was relatively easy.</p>
 
 <p>As we write software, one of the hardest things we have to do is build the right thing for today while making it easy to accommodate the needs of the future. In my experience, this kind of flexibility comes from decomposing objects and functions into small components that have a single responsibility. As requirements change, if a system is decomposed well, then only a few components will need to be added or changed to accommodate the change.</p>
 
@@ -176,7 +176,7 @@ sort | uniq -c | sort -r | head -5
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/blog/2013/01/20/srp-the-unix-way/">SRP: The Unix Way</a>
+        <a href="/blog/blog/2013/01/20/srp-the-unix-way/">SRP: The UNIX Way</a>
       </li>
     
   </ul>
