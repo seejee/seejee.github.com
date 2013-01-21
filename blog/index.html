@@ -105,22 +105,60 @@
 <p>A quick explanation of each command:</p>
 
 <ol>
-<li><p>Read the log file and skip all the lines before the controller action:
-sed &#8216;1,/CurrentItemsController#show/d&#8217; log/test.log</p></li>
-<li><p>Skip all the lines after the controller action
-sed &#8216;/Completed/,$d&#8217;</p></li>
-<li><p>Remove all the text on each line that precedes &#8216;SELECT&#8217;
-sed &#8216;s/<sup>.*SELECT/SELECT/&#8217;</sup></p></li>
-<li><p>Sort the rows so duplicate queries will be on adjacent lines
-sort</p></li>
-<li><p>Group the duplicate lines and count them
-uniq -c</p></li>
-<li><p>Sort the queries by how many times they were duped
-sort</p></li>
-<li><p>Return the top 5
-head -5</p></li>
+<li>Read the log file and skip all the lines before the controller action.</li>
 </ol>
 
+
+<pre><code>sed '1,/CurrentItemsController#show/d' log/test.log
+</code></pre>
+
+<ol>
+<li>Skip all the lines after the controller action.</li>
+</ol>
+
+
+<pre><code>sed '/Completed/,$d' 
+</code></pre>
+
+<ol>
+<li>Remove all the text on each line that precedes &#8216;SELECT&#8217;.</li>
+</ol>
+
+
+<pre><code>sed 's/^.*SELECT/SELECT/'
+</code></pre>
+
+<ol>
+<li>Sort the rows so duplicate queries will be on adjacent lines.</li>
+</ol>
+
+
+<pre><code>sort
+</code></pre>
+
+<ol>
+<li>Group the duplicate lines and count them.</li>
+</ol>
+
+
+<pre><code>uniq -c
+</code></pre>
+
+<ol>
+<li>Sort the queries by how many times they were duped.</li>
+</ol>
+
+
+<pre><code>sort
+</code></pre>
+
+<ol>
+<li>Return the top 5.</li>
+</ol>
+
+
+<pre><code>head -5
+</code></pre>
 
 <p>And it generated this output:</p>
 
