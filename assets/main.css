@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6 {
   border-top: solid 1px #E5E5E5;
 }
 
+.greeting {
+  line-height: 1.1;
+}
+
 .greeting h1 {
 }
 
@@ -42,12 +46,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #C6C6C6;
 }
 
+.greeting h2 {
+  color: #C6C6C6;
+}
+
 .content {
-  line-height: 1.2;
+  line-height: 1.4;
 
   padding-left: 20px;
   padding-right: 20px;
-  border-bottom: solid 1px #E5E5E5;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .content p {
@@ -57,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .social {
   padding: 10px;
+  border-top: solid 1px #E5E5E5;
   border-bottom: solid 1px #E5E5E5;
 }
 
