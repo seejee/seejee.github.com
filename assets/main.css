@@ -4,7 +4,6 @@ body {
   font-weight: normal;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 120%;
-
 }
 
 a {
@@ -23,14 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #container {
   width: 650px;
-  margin: 0 auto 50px auto;
-  padding: 70px 0 0 0;
+  margin: 50px auto 50px auto;
 }
 
 .header {
   text-transform: uppercase;
 
-  padding: 20px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   border-bottom: solid 1px #E5E5E5;
   border-top: solid 1px #E5E5E5;
 }
@@ -55,13 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 25px;
-  margin-bottom: 25px;
 }
 
 .content p {
   margin-top: 20px;
-  padding: 0px;
 }
 
 .social {
